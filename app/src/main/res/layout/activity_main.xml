@@ -6,9 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
     <WebView
+        android:id="@+id/webSpace"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="226dp"
-        tools:layout_editor_absoluteY="331dp" />
+        tools:layout_editor_absoluteY="331dp" >
+
+    </WebView>
 </androidx.constraintlayout.widget.ConstraintLayout>
