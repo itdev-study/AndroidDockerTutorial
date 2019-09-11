@@ -2,9 +2,11 @@ package net.telworks.androiddockertutorial;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -63,11 +65,13 @@ public class MainActivity extends AppCompatActivity {
         if (mWebBackForwardList.getCurrentIndex() > 0)
             historyUrl = mWebBackForwardList.getItemAtIndex(mWebBackForwardList.getCurrentIndex()-1).getUrl();
 
-        Toast toast = Toast.makeText(MainActivity.this, "Возврат: "+historyUrl, Toast.LENGTH_LONG);
-        toast.show();
+      /*  Toast toast = Toast.makeText(MainActivity.this, "Возврат: "+historyUrl, Toast.LENGTH_LONG);
+        toast.show();*/
 
         if (webSpace.canGoBack()) webSpace.goBack();
     }
+
+
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -76,8 +80,8 @@ public class MainActivity extends AppCompatActivity {
             if (mWebBackForwardList.getCurrentIndex() > 0)
                 historyUrl = mWebBackForwardList.getItemAtIndex(mWebBackForwardList.getCurrentIndex()-1).getUrl();
 
-            Toast toast = Toast.makeText(MainActivity.this, "Возврат: "+historyUrl, Toast.LENGTH_LONG);
-            toast.show();
+          /*  Toast toast = Toast.makeText(MainActivity.this, "Возврат: "+historyUrl, Toast.LENGTH_LONG);
+            toast.show();*/
 
             if (webSpace.canGoBack()) webSpace.goBack();
         } else
@@ -85,17 +89,40 @@ public class MainActivity extends AppCompatActivity {
             if (mWebBackForwardList.getCurrentIndex() > 0)
                 historyUrl = mWebBackForwardList.getItemAtIndex(mWebBackForwardList.getCurrentIndex()-1).getUrl();
 
-            Toast toast = Toast.makeText(MainActivity.this, "Вперед: " + historyUrl, Toast.LENGTH_LONG);
-            toast.show();
+          /*  Toast toast = Toast.makeText(MainActivity.this, "Вперед: " + historyUrl, Toast.LENGTH_LONG);
+            toast.show();*/
             if (webSpace.canGoForward()) webSpace.goForward();
         } else
         if (item.getItemId() == R.id.btnMainPage) {
             webSpace.loadUrl("file:///android_asset/Content.HTML");
-            Toast toast = Toast.makeText(MainActivity.this, "Домой: ", Toast.LENGTH_LONG);
-            toast.show();
+            /*Toast toast = Toast.makeText(MainActivity.this, "Домой: ", Toast.LENGTH_LONG);
+            toast.show();*/
 
+        }else
+        if (item.getItemId() == R.id.btnAbout) {
+            //webSpace.loadUrl("file:///android_asset/Content.HTML");
+           // Toast toast = Toast.makeText(MainActivity.this, "О программе ", Toast.LENGTH_LONG);
+          //  toast.show();
+            showAboutDialog();
         }
 
         return true;
+    }
+
+    public void showAboutDialog(){
+        DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                switch (which){
+                    case DialogInterface.BUTTON_POSITIVE:
+                        //Yes button clicked
+                        break;
+                }
+            }
+        };
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("О программе: Справочник по Docker").setPositiveButton("Ok", dialogClickListener)
+                .show();
     }
 }

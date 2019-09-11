@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1251">
+  </head>
+  <body>
+    <p>Установка Docker</p>
+    <strong>Установка Docker в Ubuntu 19.04</strong>
+    <p><strong>Загрузка и установка ключа авторизации пакетов:</strong></p>
+    <p>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key
+      add -</p>
+    <p><strong>Добавить репозитарий Docker в Ubuntu 19.04:</strong><br>
+      add-apt-repository "deb [arch=amd64]
+      https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable edge"<br>
+      apt-get update<br>
+      apt-cache policy docker-ce</p>
+    <p><strong>Если не выводит ничего, то добавляем другой (тестовый)
+        репозитарий Docker:</strong></p>
+    <p>add-apt-repository "deb [arch=amd64]
+      https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable edge
+      test"</p>
+    <p><strong>Обновляем базу пакетов:</strong><br>
+      apt-get update</p>
+    <p><strong>Проверяем наличие пакетов в обновленной базе:</strong><br>
+      apt-cache policy docker-ce</p>
+    <p><strong>Должна отобразиться информация о кандидате на установку:</strong></p>
+    <p>docker-ce:</p>
+    <p>Candidate: 5:19.03.0~1.4.beta4-0~ubuntu-disco</p>
+    <p>…..<br>
+      <strong>Производим установку:</strong><br>
+      apt-get install docker-ce</p>
+    <p><strong>После завершения установки проверяем статус работы сервиса:</strong><br>
+      systemctl status docker</p>
+    <p><strong>Проверяем версию:</strong><br>
+      docker --version</p>
+    <p><strong>Запускаем тестовый контейнер Docker:</strong></p>
+    <p>Docker version 19.03.0-beta4, build e4666ebe81<br>
+      docker run hello-world</p>
+    <p><strong>При успешном тесте должно отобразиться:</strong></p>
+    <p>Hello from Docker!</p>
+  </body>
+</html>

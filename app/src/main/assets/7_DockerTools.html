@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1251">
+  </head>
+  <body>
+    <p>Инструменты Docker</p>
+    <p><span class="tlid-translation translation" lang="ru">Compose - это
+        инструмент для определения и запуска многоконтейнерных приложений
+        Docker. С Compose вы используете файл YAML для настройки служб вашего
+        приложения. Затем с помощью одной команды вы создаете и запускаете все
+        службы из вашей конфигурации. Чтобы узнать больше обо всех функциях
+        Compose, см. Список функций.<br>
+        <br>
+        Compose работает во всех средах: производство, подготовка, разработка,
+        тестирование, а также рабочие процессы CI. Вы можете узнать больше о
+        каждом случае в Общих случаях использования.<br>
+        <br>
+        Использование Compose в основном состоит из трех этапов:<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Определите среду своего приложения с помощью
+        Dockerfile, чтобы его можно было воспроизвести где угодно.<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Определите службы, которые составляют ваше
+        приложение, в docker-compose.yml, чтобы их можно было запускать вместе в
+        изолированной среде.<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Запустите docker-compose, и Compose запустит и
+        запустит все ваше приложение.<br>
+        <br>
+        Docker-compose.yml выглядит так:<br>
+        <br>
+      </span></p>
+    <pre class="highlight"><code>version: '3'
+services:
+  web:
+    build: .
+    ports:
+    - "5000:5000"
+    volumes:
+    - .:/code
+    - logvolume01:/var/log
+    links:
+    - redis
+  redis:
+    image: redis
+volumes:
+  logvolume01: {}</code></pre>
+    <p><span class="tlid-translation translation" lang="ru"><br>
+        Для получения дополнительной информации о файле Compose см. Ссылку на
+        файл Compose.<br>
+        <br>
+        Compose имеет команды для управления всем жизненным циклом вашего
+        приложения:<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Запускать, останавливать и перестраивать службы<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Просмотр статуса запущенных сервисов<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Поток вывода журнала запущенных служб<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Запустить одноразовую команду в службе</span></p>
+    <p><br>
+      <span class="st"><a href="Content.HTML">ОГЛАВЛЕНИЕ</a></span></p>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1251">
+  </head>
+  <body>
+    <p>Полезные команды </p>
+    Docker Commands<br>
+    <br>
+    1. docker –version<br>
+    <br>
+    This command is used to get the currently installed version of docker <br>
+    <br>
+    2. docker pull<br>
+    <br>
+    Usage: docker pull &lt;image name&gt;<br>
+    <br>
+    This command is used to pull images from the docker
+    repository(hub.docker.com)<br>
+    <br>
+    <br>
+    3. docker run<br>
+    <br>
+    Usage: docker run -it -d &lt;image name&gt;<br>
+    <br>
+    This command is used to create a container from an image<br>
+    <br>
+    <br>
+    4. docker ps<br>
+    <br>
+    This command is used to list the running containers<br>
+    <br>
+    5. docker ps -a<br>
+    Course Curriculum<br>
+    Docker Training and Certification<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; Instructor-led SessionsReal-life Case
+    StudiesAssignmentsLifetime Access<br>
+    <br>
+    This command is used to show all the running and exited containers<br>
+    <br>
+    <br>
+    6. docker exec<br>
+    <br>
+    Usage: docker exec -it &lt;container id&gt; bash<br>
+    <br>
+    This command is used to access the running container<br>
+    <br>
+    7. docker stop<br>
+    <br>
+    Usage: docker stop &lt;container id&gt;<br>
+    <br>
+    This command stops a running container<br>
+    <br>
+    <br>
+    8. docker kill<br>
+    <br>
+    Usage: docker kill &lt;container id&gt;<br>
+    <br>
+    This command kills the container by stopping its execution immediately. The
+    difference between ‘docker kill’ and ‘docker stop’ is that ‘docker stop’
+    gives the container time to shutdown gracefully, in situations when it is
+    taking too much time for getting the container to stop, one can opt to kill
+    it<br>
+    <br>
+    <br>
+    9. docker commit<br>
+    <br>
+    Usage: docker commit &lt;conatainer id&gt; &lt;username/imagename&gt;<br>
+    <br>
+    This command creates a new image of an edited container on the local system<br>
+    <br>
+    <br>
+    10. docker login<br>
+    <br>
+    This command is used to login to the docker hub repository
+  </body>
+</html>

@@ -1,0 +1,568 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1251">
+  </head>
+  <body>
+    <header class="entry-header">
+      <h1 class="entry-title">Справочник команд<br>
+      </h1>
+    </header>
+    <div class="entry-content">
+      <pre class="prettyprint prettyprinted"><span class="typ"><br></span><br></pre>
+      <p>Параметры команд:</p>
+      <p><span class="fontstyle0">docker -v</span></p>
+      <p><span class="fontstyle0">docker info</span></p>
+      <p><span class="fontstyle0">docker run [options] IMAGE [command] [args]</span></p>
+      <table class="NormalTable">
+        <tbody>
+          <tr>
+            <td width="139"><span class="fontstyle0">Flags </span></td>
+            <td width="380"><span class="fontstyle0">Explanation</span></td>
+          </tr>
+          <tr>
+            <td width="139"><span class="fontstyle2">-a, --attach=[] </span></td>
+            <td width="380"><span class="fontstyle3">Attach to the </span><span
+
+                class="fontstyle4">stdin</span><span class="fontstyle3">, </span><span
+
+                class="fontstyle4">stdout</span><span class="fontstyle3">, or </span><span
+
+                class="fontstyle4">stderr </span><span class="fontstyle3">files
+                (standard input,<br>
+                output, and error files.).</span></td>
+          </tr>
+          <tr>
+            <td width="139"><span class="fontstyle2">-d, --detach </span></td>
+            <td width="380"><span class="fontstyle3">This runs the container in
+                the background.</span></td>
+          </tr>
+          <tr>
+            <td width="139"><span class="fontstyle2">-i, --interactive </span></td>
+            <td width="380"><span class="fontstyle3">This runs the container in
+                interactive mode (keeps the </span><span class="fontstyle4">stdin
+                </span><span class="fontstyle3">file<br>
+                open).</span></td>
+          </tr>
+          <tr>
+            <td width="139"><span class="fontstyle2">-t, --tty </span></td>
+            <td width="380"><span class="fontstyle3">This allocates a pseudo </span><span
+
+                class="fontstyle4">tty </span><span class="fontstyle3">flag
+                (which is required if you want<br>
+                to attach to the container’s terminal).</span></td>
+          </tr>
+          <tr>
+            <td width="139"><span class="fontstyle2">-p, --publish=[] </span></td>
+            <td width="380"><span class="fontstyle3">This publishes a
+                container’s port to the host<br>
+                (</span><span class="fontstyle4">ip:hostport:containerport</span><span
+
+                class="fontstyle3">).</span></td>
+          </tr>
+          <tr>
+            <td width="139"><span class="fontstyle2">--rm </span></td>
+            <td width="380"><span class="fontstyle3">This automatically removes
+                the container when exited (it cannot<br>
+                be used with the </span><span class="fontstyle4">-d </span><span
+
+                class="fontstyle3">flag).</span></td>
+          </tr>
+          <tr>
+            <td width="139"><span class="fontstyle2">--privileged </span></td>
+            <td width="380"><span class="fontstyle3">This gives additional
+                privileges to this container.</span></td>
+          </tr>
+          <tr>
+            <td width="139"><span class="fontstyle2">-v, --volume=[] </span></td>
+            <td width="380"><span class="fontstyle3">This bind mounts a volume
+                (from host =&gt; </span><span class="fontstyle4">/host:/<br>
+                container</span><span class="fontstyle3">; from docker =&gt; </span><span
+
+                class="fontstyle4">/container</span><span class="fontstyle3">).</span></td>
+          </tr>
+          <tr>
+            <td width="139"><span class="fontstyle2">--volumes-from=[] </span></td>
+            <td width="380"><span class="fontstyle3">This mounts volumes from
+                specified containers.</span></td>
+          </tr>
+          <tr>
+            <td width="139"><span class="fontstyle2">-w, --workdir="" </span></td>
+            <td width="380"><span class="fontstyle3">This is the working
+                directory inside the container.</span></td>
+          </tr>
+          <tr>
+            <td width="139"><span class="fontstyle2">--name="" </span></td>
+            <td width="380"><span class="fontstyle3">This assigns a name to the
+                container.</span></td>
+          </tr>
+          <tr>
+            <td width="139"><span class="fontstyle2">-h, --hostname="" </span></td>
+            <td width="380"><span class="fontstyle3">This assigns a hostname to
+                the container.</span></td>
+          </tr>
+          <tr>
+            <td width="139"><span class="fontstyle2">-u, --user="" </span></td>
+            <td width="380"><span class="fontstyle3">This is the username or UID
+                the container should run on.</span></td>
+          </tr>
+          <tr>
+            <td width="139"><span class="fontstyle2">-e, --env=[] </span></td>
+            <td width="380"><span class="fontstyle3">This sets the environment
+                variables.</span></td>
+          </tr>
+          <tr>
+            <td width="139"><span class="fontstyle2">--env-file=[] </span></td>
+            <td width="380"><span class="fontstyle3">This reads environment
+                variables from a new line-delimited file.</span></td>
+          </tr>
+          <tr>
+            <td width="139"><span class="fontstyle2">--dns=[] </span></td>
+            <td width="380"><span class="fontstyle3">This sets custom DNS
+                servers.</span></td>
+          </tr>
+          <tr>
+            <td width="139"><span class="fontstyle2">--dns-search=[] </span></td>
+            <td width="380"><span class="fontstyle3">This sets custom DNS search
+                domains.</span></td>
+          </tr>
+          <tr>
+            <td width="139"><span class="fontstyle2">--link=[] </span></td>
+            <td width="380"><span class="fontstyle3">This adds link to another
+                container (</span><span class="fontstyle4">name:alias</span><span
+
+                class="fontstyle3">).</span></td>
+          </tr>
+          <tr>
+            <td width="139"><span class="fontstyle2">-c, --cpu<br>
+                shares=0</span></td>
+            <td width="380"><span class="fontstyle3">This is the relative CPU
+                share for this container.</span></td>
+          </tr>
+          <tr>
+            <td width="139"><span class="fontstyle2">--cpuset="" </span></td>
+            <td width="380"><span class="fontstyle3">These are the CPUs in which
+                to allow execution; starts with 0.<br>
+                (For example, 0 to 3).</span></td>
+          </tr>
+          <tr>
+            <td width="139"><span class="fontstyle2">-m, --memory="" </span></td>
+            <td width="380"><span class="fontstyle3">This is the memory limit
+                for this container<br>
+              </span><span class="fontstyle4">(&lt;number&gt;&lt;b|k|m|g&gt;</span><span
+
+                class="fontstyle3">).</span></td>
+          </tr>
+          <tr>
+            <td width="139"><span class="fontstyle2">--restart="" </span></td>
+            <td width="380"><span class="fontstyle3">(v1.2+) This specifies a
+                restart policy in case the container<br>
+                crashes.</span></td>
+          </tr>
+          <tr>
+            <td width="139"><br>
+            </td>
+            <td width="380"><br>
+            </td>
+          </tr>
+          <tr>
+            <td width="139"><span class="fontstyle0">Flags </span></td>
+            <td width="380"><span class="fontstyle0">Explanation</span></td>
+          </tr>
+          <tr>
+            <td width="139"><span class="fontstyle2">--cap-add="" </span></td>
+            <td width="380"><span class="fontstyle3">(v1.2+) This grants a
+                capability to a container (refer to </span><span class="fontstyle4">Chapter
+                4</span><span class="fontstyle3">,<br>
+              </span><span class="fontstyle4">Security Best Practices</span><span
+
+                class="fontstyle3">).</span></td>
+          </tr>
+          <tr>
+            <td width="139"><span class="fontstyle2">--cap-drop="" </span></td>
+            <td width="380"><span class="fontstyle3">(v1.2+) This blacklists a
+                capability to a container (refer to </span><span class="fontstyle4">Chapter<br>
+                4</span><span class="fontstyle3">, </span><span class="fontstyle4">Security
+                Best Practices</span><span class="fontstyle3">).</span></td>
+          </tr>
+          <tr>
+            <td width="139"><span class="fontstyle2">--device="" </span></td>
+            <td width="380"><span class="fontstyle3">(v1.2+) This mounts a
+                device on a container</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>&nbsp;</p>
+      <table>
+        <tbody>
+          <tr>
+            <td><span class="fontstyle0">docker run -dt ubuntu ps</span></td>
+            <td>запустить контейнер из образа&nbsp;<span class="fontstyle0">ubuntu</span></td>
+          </tr>
+          <tr>
+            <td><span class="fontstyle0">docker run -dit --name OD-name-example
+                ubuntu /bin/bash</span></td>
+            <td>запустить контейнер&nbsp;<span class="fontstyle0">OD-name-example</span>
+              из образа&nbsp;<span class="fontstyle0">ubuntu&nbsp;/bin/bash</span></td>
+          </tr>
+          <tr>
+            <td><span class="fontstyle0"> docker attach OD-name-example<br>
+              </span></td>
+            <td>Подключиться к <span class="fontstyle0">/bin/bash
+                контейнера&nbsp;OD-name-example. После exit - останавливает
+                контейнер.<br>
+              </span></td>
+          </tr>
+          <tr>
+            <td><span class="fontstyle0"> docker run --rm -it --name
+                OD-rm-example ubuntu /bin/bash<br>
+              </span></td>
+            <td>Запустить контейнер&nbsp;<span class="fontstyle0">OD-name-example</span>
+              из образа&nbsp;<span class="fontstyle0">ubuntu&nbsp;/bin/bash</span>
+              с автоматическим удалением после выхода</td>
+          </tr>
+          <tr>
+            <td><span class="fontstyle0">docker run --rm -it --name
+                OD-rm-python2 python:2.7 python -m SimpleHTTPServer 8000</span></td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="fontstyle0">docker run -p 0.0.0.0:8000:8000 --rm
+                -it --name OD-pythonserver-2 python:2.7 python -m
+                SimpleHTTPServer 8000</span></td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="fontstyle0"> docker run
+                --device=/dev/video0:/dev/video0<br>
+              </span></td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="fontstyle0"> docker run --restart=always ubuntu<br>
+              </span></td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="fontstyle0"> docker run --restart=on-failure:5
+                ubuntu<br>
+              </span></td>
+            <td><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>&nbsp;</p>
+      <p><span class="fontstyle0">docker search</span></p>
+      <table>
+        <tbody>
+          <tr>
+            <td><span class="fontstyle0">docker search python | less</span></td>
+            <td>искать образ Питон и вывечти в less</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>&nbsp;</p>
+      <p><span class="fontstyle0">docker pull
+          &lt;path_to_registry&gt;/&lt;image_or_repository&gt;</span></p>
+      <table>
+        <tbody>
+          <tr>
+            <td><span class="fontstyle0">docker pull python</span></td>
+            <td>получить из репозитария&nbsp;<span class="fontstyle0">python</span></td>
+          </tr>
+          <tr>
+            <td><span class="fontstyle0">docker pull python:2.7</span></td>
+            <td><span class="fontstyle0">получить из репозитария python:2.7</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>&nbsp;</p>
+      <p><span class="fontstyle0">docker start [-i] [-a] &lt;container(s)&gt;</span></p>
+      <p><span class="fontstyle0">docker stop&nbsp;&lt;container(s)&gt;</span></p>
+      <p><span class="fontstyle0">docker restart &lt;container(s)&gt;</span></p>
+      <p><span class="fontstyle0">dockerDocker rm &lt;container(s)&gt;</span></p>
+      <p><span class="fontstyle0">docker rm $(docker ps -a -q)</span></p>
+      <p><span class="fontstyle0">docker logs &lt;container(s)&gt;</span></p>
+      <p>&nbsp;</p>
+      <p><span class="fontstyle0">docker ps [option(s)]</span></p>
+      <table class="NormalTable">
+        <tbody>
+          <tr>
+            <td width="97"><span class="fontstyle0">Параметр</span></td>
+            <td width="394"><span class="fontstyle0">Назначение</span></td>
+          </tr>
+          <tr>
+            <td width="97"><span class="fontstyle2">-a, --all </span></td>
+            <td width="394"><span class="fontstyle3">Показать все контейнеры в
+                системе<br>
+              </span></td>
+          </tr>
+          <tr>
+            <td width="97"><span class="fontstyle2">-q, --quiet </span></td>
+            <td width="394"><span class="fontstyle3">Показать только ID
+                контейнеров</span></td>
+          </tr>
+          <tr>
+            <td width="97"><span class="fontstyle2">-s, --size </span></td>
+            <td width="394"><span class="fontstyle3">Показать размер контейнера<br>
+              </span></td>
+          </tr>
+          <tr>
+            <td width="97"><span class="fontstyle2">-l,<br>
+                --latest</span></td>
+            <td width="394"><span class="fontstyle3">Показать последний
+                созданный контейнер<br>
+              </span></td>
+          </tr>
+          <tr>
+            <td width="97"><span class="fontstyle2">-n="" </span></td>
+            <td width="394"><span class="fontstyle3">Показать количество n
+                последних созданных контейнеров</span></td>
+          </tr>
+          <tr>
+            <td width="97"><span class="fontstyle2">--before="" </span></td>
+            <td width="394"><span class="fontstyle3">Показать контейнеры,
+                созданные раньше контейнера с указанным ID или именем.</span></td>
+          </tr>
+          <tr>
+            <td width="97"><span class="fontstyle2">--after="" </span></td>
+            <td width="394"><span class="fontstyle3">Показать контейнеры,
+                созданные позже контейнера с указанным ID или именем.</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>&nbsp;</p>
+      <p>d<span class="fontstyle0">ocker inspect &lt;image/container&gt; </span></p>
+      <p>d<span class="fontstyle0">ocker inspect ubuntu </span></p>
+      <p><span class="fontstyle0">docker inspect -f
+          ‘{{.NetworkSettings.IPAddress}}’ &lt;container&gt;</span></p>
+      <p>&nbsp;</p>
+      <p><span class="fontstyle0">docker top &lt;container&gt;</span></p>
+      <p>&nbsp;</p>
+      <table>
+        <tbody>
+          <tr>
+            <td><span class="fontstyle0">docker run -d -p 4000:2368 --name
+                OD-nginx nginx</span></td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="fontstyle0">&nbsp;docker top OD-nginx</span></td>
+            <td><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>&nbsp;</p>
+      <p><span class="fontstyle0">docker attach &nbsp;&lt;container&gt;</span></p>
+      <table>
+        <tbody>
+          <tr>
+            <td>docker run -dit --name OD-debian-ex debian /bin/bash</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="fontstyle0">docker attach OD-debian-ex<br>
+              </span></td>
+            <td><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>&nbsp;</p>
+      <p><span class="fontstyle0">docker kill &lt;container&gt;</span></p>
+      <table>
+        <tbody>
+          <tr>
+            <td>docker run -dit --name OD-debian-ex2 debian /bin/bash</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="fontstyle0">docker kill OD-debian-ex2<br>
+              </span></td>
+            <td><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>&nbsp;</p>
+      <p><span class="fontstyle0">docker cp&nbsp;</span></p>
+      <table>
+        <tbody>
+          <tr>
+            <td><span class="fontstyle0">docker run -it –name OD-cp-bell ubuntu
+                /bin/bash</span></td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="fontstyle0">touch $(echo -e ‘\007’)</span></td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="fontstyle0">docker cp OD-cp-bell:/$(echo -e ‘\007’)
+                $(pwd)</span></td>
+            <td><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>&nbsp;</p>
+      <p><span class="fontstyle0">docker port CONTAINER PRIVATE_PORT</span></p>
+      <p><span class="fontstyle0">docker port OD-ghost 2368</span></p>
+      <p>&nbsp;</p>
+      <p><span class="fontstyle0">docker images [OPTIONS] [NAME]</span></p>
+      <table class="NormalTable">
+        <tbody>
+          <tr>
+            <td width="122"><span class="fontstyle0">Параметр </span></td>
+            <td width="376"><span class="fontstyle0">Назначение</span></td>
+          </tr>
+          <tr>
+            <td width="122"><span class="fontstyle2">-a, --all </span></td>
+            <td width="376"><span class="fontstyle3">This shows all images,
+                including intermediate layers.</span></td>
+          </tr>
+          <tr>
+            <td width="122"><span class="fontstyle2">-f, --filter=[] </span></td>
+            <td width="376"><span class="fontstyle3">This provides filter
+                values.</span></td>
+          </tr>
+          <tr>
+            <td width="122"><span class="fontstyle2">--no-trunc </span></td>
+            <td width="376"><span class="fontstyle3">This doesn’t truncate
+                output (shows complete ID).</span></td>
+          </tr>
+          <tr>
+            <td width="122"><span class="fontstyle2">-q, --quiet </span></td>
+            <td width="376"><span class="fontstyle3">This shows only the image
+                IDs.</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>&nbsp;</p>
+      <p><span class="fontstyle0">docker rmi [OPTION] {IMAGE(s)]</span></p>
+      <table class="NormalTable">
+        <tbody>
+          <tr>
+            <td width="143"><span class="fontstyle0">Flag </span></td>
+            <td width="308"><span class="fontstyle0">Explanation</span></td>
+          </tr>
+          <tr>
+            <td width="143"><span class="fontstyle2">-f, --force </span></td>
+            <td width="308"><span class="fontstyle3">This forcibly removes the
+                image (or images).</span></td>
+          </tr>
+          <tr>
+            <td width="143"><span class="fontstyle2">--no-prune </span></td>
+            <td width="308"><span class="fontstyle3">This command does not
+                delete untagged parents.</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p><span class="fontstyle0">Docker login [OPTIONS] [SERVER]</span></p>
+      <table class="NormalTable">
+        <tbody>
+          <tr>
+            <td width="264"><span class="fontstyle0">Flag </span></td>
+            <td width="176"><span class="fontstyle0">Explanation</span></td>
+          </tr>
+          <tr>
+            <td width="264"><span class="fontstyle2">-e, --email="" </span></td>
+            <td width="176"><span class="fontstyle3">Email</span></td>
+          </tr>
+          <tr>
+            <td width="264"><span class="fontstyle2">-p, --password="" </span></td>
+            <td width="176"><span class="fontstyle3">Password</span></td>
+          </tr>
+          <tr>
+            <td width="264"><span class="fontstyle2">-u, --username="" </span></td>
+            <td width="176"><span class="fontstyle3">Username</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>&nbsp;</p>
+      <p><span class="fontstyle0">docker events [OPTIONS]</span></p>
+      <table class="NormalTable">
+        <tbody>
+          <tr>
+            <td width="103"><span class="fontstyle0">Flag </span></td>
+            <td width="372"><span class="fontstyle0">Explanation</span></td>
+          </tr>
+          <tr>
+            <td width="103"><span class="fontstyle2">--since="" </span></td>
+            <td width="372"><span class="fontstyle3">This shows all events
+                created since timestamp (in Unix).</span></td>
+          </tr>
+          <tr>
+            <td width="103"><span class="fontstyle2">--until="" </span></td>
+            <td width="372"><span class="fontstyle3">This stream events until
+                timestamp.</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>&nbsp;</p>
+      <p><span class="fontstyle0">docker build [OPTIONS] PATH | URL | -</span></p>
+      <table class="NormalTable">
+        <tbody>
+          <tr>
+            <td width="112"><span class="fontstyle0">Flag </span></td>
+            <td width="388"><span class="fontstyle0">Explanation</span></td>
+          </tr>
+          <tr>
+            <td width="112"><span class="fontstyle2">-t, --tag="" </span></td>
+            <td width="388"><span class="fontstyle3">This is the repository name
+                (and an optional tag) to be applied to<br>
+                the resulting image in case of success.</span></td>
+          </tr>
+          <tr>
+            <td width="112"><span class="fontstyle2">-q, --quiet </span></td>
+            <td width="388"><span class="fontstyle3">This suppresses the output,
+                which by default is verbose.</span></td>
+          </tr>
+          <tr>
+            <td width="112"><span class="fontstyle2">--rm=true </span></td>
+            <td width="388"><span class="fontstyle3">This removes intermediate
+                containers after a successful build.</span></td>
+          </tr>
+          <tr>
+            <td width="112"><span class="fontstyle2">--force-rm </span></td>
+            <td width="388"><span class="fontstyle3">This always removes
+                intermediate containers, even after<br>
+                unsuccessful builds.</span></td>
+          </tr>
+          <tr>
+            <td width="112"><span class="fontstyle2">--no-cache </span></td>
+            <td width="388"><span class="fontstyle3">This command does not use
+                the cache while building the image.</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>&nbsp;</p>
+      <table>
+        <tbody>
+          <tr>
+            <td><span class="fontstyle0">docker build -t
+                shrikrishna/code.it:docker Dockerfile .</span></td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
